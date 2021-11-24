@@ -1,4 +1,5 @@
 # yavpm
 Yet Another Vim Package Manager
 
-Purpose: Front-end friendly package manager interface to help configure and add VIM Plugins based upon the built in package manager.
+## Purpose
+YAVPM is a front-end friendly package manager interface to help configure and add Vim plugins. It's based upon the built-in Vim8 package manager.
