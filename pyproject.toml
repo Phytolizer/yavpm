@@ -3,7 +3,7 @@ name = "yavpm"
 version = "0.1.0"
 description = "Yet Another Vim Package Manager"
 license = "MIT"
-authors = ["Kyle Coffey <me@phytolizer.dev>", "Devin Baughman <dbaughman1993@outlook.com>"] # add your name and email to this
+authors = ["Kyle Coffey <me@phytolizer.dev>", "Devin Baughman <dbaughman1993@outlook.com>"]
 readme = "README.md"
 
 [tool.poetry.dependencies]
