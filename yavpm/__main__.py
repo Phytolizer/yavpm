@@ -1,7 +1,8 @@
 def yavpm_file():
-	pass
+    pass
 
 
 def main():
-	print("Hello from main"
+    print("Hello from main")
+
 main()
