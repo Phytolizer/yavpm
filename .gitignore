@@ -5,6 +5,7 @@ __pycache__/
 
 #replit
 .replit
+main.sh
 
 # C extensions
 *.so

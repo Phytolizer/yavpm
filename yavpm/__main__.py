@@ -1,9 +1,7 @@
-def yavpm_file():
-    pass
+import yavpm
 
-
+git_url = ""
 def main():
-    print("Hello from main")
-
+  print(yavpm.yavpm_dir())
 
 main()
