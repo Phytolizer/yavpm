@@ -1,12 +1,11 @@
-from git import Git
+import git
 
-git_url = "https://github.com/preservim/nerdcommenter.git"
+TEST_URL = "https://github.com/preservim/nerdcommenter.git"
 
 
 def main():
-    # test
-    git_obj = Git(git_url)
-    print(git_obj.project_name)
+    test_proj = git.Project(TEST_URL)
+    print(test_proj.project_name)
 
 
 main()

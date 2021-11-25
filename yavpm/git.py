@@ -4,7 +4,7 @@ import subprocess
 import yavpm
 
 
-class Git:
+class Project:
     def __init__(self, repo):
         self.project_name = self.parse_project_name(repo)
 
