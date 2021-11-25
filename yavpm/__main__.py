@@ -1,4 +1,4 @@
-import git
+from yavpm import git
 
 git_url = "https://github.com/Phytolizer/yavpm"
 def main():

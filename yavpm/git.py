@@ -1,6 +1,6 @@
 import os
 import subprocess
-import yavpm
+from yavpm import yavpm
 
 def clone_dir(url):
     return os.path.join(yavpm.dir(), os.path.basename(url).replace(".git", ""))
