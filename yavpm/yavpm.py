@@ -1,3 +1,4 @@
+import abc
 import os
 
 
@@ -14,3 +15,9 @@ def dir():
         pass
     else:
         return os.path.expanduser("~") + "/.vim/plug/yavpm"
+
+
+class Project(abc.ABC):
+    @abc.abstractmethod
+    def clone(self):
+        pass
