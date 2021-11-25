@@ -1,4 +1,4 @@
-import git
+from yavpm import git
 
 TEST_URL = "https://github.com/preservim/nerdcommenter.git"
 

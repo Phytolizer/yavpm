@@ -1,7 +1,7 @@
 import os
 import subprocess
 
-import yavpm
+from yavpm import yavpm
 
 
 class Project(yavpm.Project):
