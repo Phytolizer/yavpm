@@ -1,10 +1,10 @@
 import os
 import subprocess
 
-#causes error 'import yavpm' works
-##from yavpm import yavpm
 import yavpm
-class git:
+
+
+class Git:
     def __init__(self, repo):
         self.project_name = self.parse_project_name(repo)
         self.clone(repo)
@@ -14,7 +14,6 @@ class git:
 
     def clone_dir(self):
         return os.path.join(yavpm.dir(), self.project_name)
-
 
     def clone(self, repo):
         try:

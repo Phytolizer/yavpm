@@ -1,14 +1,12 @@
-##causes error 'import git' works
-##from yavpm import git
-from git import git
+from git import Git
+
 git_url = "https://github.com/preservim/nerdcommenter.git"
 
 
 def main():
     # test
-    git_obj = git(git_url)
+    git_obj = Git(git_url)
     print(git_obj.project_name)
-    #git_obj.clone(git_url)
 
 
 main()
