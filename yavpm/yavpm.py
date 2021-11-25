@@ -14,7 +14,7 @@ def dir():
     if os.name == "nt":
         pass
     else:
-        return os.path.expanduser("~") + "/.vim/pack/yavpm/start"
+        return os.path.expanduser("~") + "/.vim/pack/yavpm"
 
 
 class Project(abc.ABC):
