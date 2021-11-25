@@ -7,7 +7,6 @@ import yavpm
 class Git:
     def __init__(self, repo):
         self.project_name = self.parse_project_name(repo)
-        self.clone(repo)
 
     def parse_project_name(self, url):
         return os.path.basename(url).replace(".git", "")
