@@ -1,16 +1,16 @@
 import os
 
 
-def yavpm_file():
+def file():
     pass
 
 
-def yavpm_update():
+def update():
     pass
 
 
-def yavpm_dir():
+def dir():
     if os.name == "nt":
         pass
     else:
-        return "~/.vim/plug/yavpm"
+        return os.path.expanduser('~') + '/.vim/plug/yavpm'

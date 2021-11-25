@@ -1,10 +1,7 @@
-import yavpm
+import git
 
-git_url = ""
-
-
+git_url = "https://github.com/Phytolizer/yavpm"
 def main():
-    print(yavpm.yavpm_dir())
-
-
+	#test
+	git.clone(git_url)
 main()
