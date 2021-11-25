@@ -4,8 +4,12 @@ import subprocess
 from yavpm import yavpm
 
 
+def project_name(url):
+    return os.path.basename(url).replace(".git", "")
+
+
 def clone_dir(url):
-    return os.path.join(yavpm.dir(), os.path.basename(url).replace(".git", ""))
+    return os.path.join(yavpm.dir(), project_name(url))
 
 
 def clone(repo):
