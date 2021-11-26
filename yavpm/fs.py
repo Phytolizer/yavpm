@@ -16,7 +16,7 @@ class Project(yavpm.Project):
         return False
 
     def install_file(self):
-        return yavpm.dir() + "/installed"
+        return os.path.join(yavpm.dir(), "installed")
 
     def write_file(self):
         open(self.install_file(), "+w").write(self.project_name)
