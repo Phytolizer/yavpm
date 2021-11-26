@@ -13,7 +13,7 @@ class Project(yavpm.Project):
         return os.path.basename(url).replace(".git", "")
 
     def clone_dir(self):
-        return os.path.join(yavpm.dir() + "/start", self.project_name)
+        return os.path.join(yavpm.dir(), "start", self.project_name)
 
     def clone(self):
         try:
