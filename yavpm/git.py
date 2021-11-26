@@ -18,5 +18,12 @@ class Project(yavpm.Project):
     def clone(self):
         try:
             subprocess.run(("git", "clone", self.url, self.clone_dir()), check=True)
+        except subprocess.CalledProcessError:
+            pass
+        else:
+            return
+        try:
+            subprocess.run(("git", "pull"), cwd=self.clone_dir(), check=True)
         except subprocess.CalledProcessError as e:
             print(f"Failed to run git: {e}")
+            raise
