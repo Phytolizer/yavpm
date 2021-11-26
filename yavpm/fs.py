@@ -9,8 +9,9 @@ class Project(yavpm.Project):
         self.already_installed = self.check_installed()
 
     def check_installed(self):
-        file = open(self.install_file(), "r")
-        for line in file.readlines():
+        with open(self.install_file(), "r") as file:
+            lines = file.readlines()
+        for line in lines:
             if line == self.project_name:
                 return True
         return False
