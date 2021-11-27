@@ -9,12 +9,16 @@ class Project(yavpm.Project):
         self.already_installed = self.check_installed()
 
     def check_installed(self):
-        with open(self.install_file(), "r") as file:
-            lines = file.readlines()
-        for line in lines:
-            if line == self.project_name:
-                return True
-        return False
+        dir = yavpm.dir()
+        if os.path.exists(dir):
+            with open(self.install_file(), "r") as file:
+                lines = file.readlines()
+            for line in lines:
+                if line == self.project_name:
+                    return True
+            return False
+        else:
+            os.makedirs(dir)
 
     def install_file(self):
         return os.path.join(yavpm.dir(), "installed")
