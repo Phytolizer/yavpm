@@ -1,3 +1,13 @@
 #!/bin/bash
-##rm -r -f ~/.vim/pack/yavpm
-poetry run python -m yavpm
+
+if [ $# -eq 0 ];
+then
+    poetry run python -m yavpm
+else
+    cmd="poetry run python -m yavpm"
+    for arg in "$@"
+    do
+        cmd="$cmd $arg"
+    done
+    eval $cmd
+fi

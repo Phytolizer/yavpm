@@ -10,6 +10,7 @@ class Project(yavpm.Project):
 
     def check_installed(self):
         dir = yavpm.dir()
+        ##make sure that directory exists
         if os.path.exists(dir):
             with open(self.install_file(), "r") as file:
                 lines = file.readlines()
