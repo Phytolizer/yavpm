@@ -7,7 +7,7 @@ TEST_URL = "https://github.com/preservim/nerdcommenter.git"
 ##terminal & cli commands to replicate each other
 ##create a commands list, preferrably in linked list/map
 ##future: commands.py
-if len(sys.argv - 1) == 0:
+if len(sys.argv)-1 == 0:
     ##todo:
     ##drop into terminal to run commands
     ##future: terminal.py
