@@ -1,4 +1,4 @@
-import commands
+from yavpm import commands
 
 ##takes the arguments provided from command line
 ##possibly just send in the list from main...
