@@ -1,22 +1,22 @@
 import sys
-import terminal, commandline
-from yavpm import fs, git
+
+from yavpm import commandline, fs, git, terminal
 
 TEST_URL = "https://github.com/preservim/nerdcommenter.git"
 
 ##terminal & cli commands to replicate each other
 ##they will each call commands.py
-if len(sys.argv)-1 == 0:
+if len(sys.argv) - 1 == 0:
     ##todo:
     ##drop into terminal to run commands
     ##future: terminal.py
-    #terminal.Terminal()
+    # terminal.repl()
     pass
 else:
     ##todo:
     ##parse commands to have actions
     ##future: commandline.py
-    #commandline.CommandLine()
+    # commandline.run(sys.argv[1:])
     pass
 
 test_proj = git.Project(TEST_URL)
