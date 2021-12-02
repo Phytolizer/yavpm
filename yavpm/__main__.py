@@ -1,5 +1,6 @@
 import sys
-
+## Question:
+## To import terminal from yavpm how do I include the Terminal class into the yavpm
 from yavpm import commandline, fs, git, terminal
 
 TEST_URL = "https://github.com/preservim/nerdcommenter.git"
@@ -11,7 +12,9 @@ if len(sys.argv) - 1 == 0:
     ##drop into terminal to run commands
     ##future: terminal.py
     # terminal.repl()
-    pass
+		# couldn't import Terminal if the class isn't named "Project" in terminal.py
+		terminal.Project.repl()
+    ##pass
 else:
     ##todo:
     ##parse commands to have actions

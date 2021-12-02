@@ -9,5 +9,6 @@ else
     do
         cmd="$cmd $arg"
     done
+		##echo $cmd
     eval $cmd
 fi
