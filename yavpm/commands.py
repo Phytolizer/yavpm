@@ -1,9 +1,6 @@
 import os, shutil
 from yavpm import git
 from yavpm.yavpm import dir
-##from yavpm.__main__ import TEST_URL
-
-
 
 def repl():
 	while True:
