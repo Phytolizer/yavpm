@@ -44,8 +44,16 @@ def add(project_name):
 ##possibly add git.pull() method
 ##update all projects installed
 def update(project_name):
-	test_proj = git.Project(project_name)
-	test_proj.pull()
+	if project_name == "all":
+		for plugin in os.listdir(os.path.join(dir(), "start")):
+			print(f"updating: {plugin}")
+			print("*************************")
+			test_proj = git.Project(plugin)
+			test_proj.pull()
+		##pass
+	else:	
+		test_proj = git.Project(project_name)
+		test_proj.pull()
 
 
 ##take project_name and remove from installed
