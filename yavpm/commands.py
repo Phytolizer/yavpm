@@ -7,8 +7,8 @@ def repl():
 		args = input("Please input command followed by argument:\n").split(" ") 
 		if args[0] in exit_words(): break
 		run_command(args)
-		print("\n\n*****type exit, quit, or break to close input*****")
-		print("\nWhat would you like to do next?")
+		print("\n\n*****type exit, break or quit to leave input*****")
+		print("What would you like to do next?")
 
 def exit_words():
 	return {
@@ -44,11 +44,12 @@ def add(project_name):
 ##possibly add git.pull() method
 ##update all projects installed
 def update(project_name):
-	if project_name == "all":
+	if project_name == "all" or project_name == "":
+		test_proj = git.Project("")
 		for plugin in os.listdir(os.path.join(dir(), "start")):
 			print(f"updating: {plugin}")
 			print("*************************")
-			test_proj = git.Project(plugin)
+			test_proj.set_project_name(plugin)
 			test_proj.pull()
 		##pass
 	else:	

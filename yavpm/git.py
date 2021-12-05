@@ -29,3 +29,6 @@ class Project(yavpm.Project):
         except subprocess.CalledProcessError as e:
             print(f"Failed to run git: {e}")
             raise
+    
+    def set_project_name(self, arg):
+        self.project_name = arg
