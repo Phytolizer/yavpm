@@ -1,31 +1,17 @@
-import sys
+from sys import argv
 ## Question:
 ## To import terminal from yavpm how do I include the Terminal class into the yavpm
-from yavpm import commandline, fs, git, terminal
+##from yavpm import commandline ##, fs, terminal
+from yavpm.commands import repl, run_command
 
 TEST_URL = "https://github.com/preservim/nerdcommenter.git"
-
-##terminal & cli commands to replicate each other
-##they will each call commands.py
-if len(sys.argv) - 1 == 0:
-    ##todo:
-    ##drop into terminal to run commands
-    ##future: terminal.py
-    # terminal.repl()
-		# couldn't import Terminal if the class isn't named "Project" in terminal.py
-		terminal.Project.repl()
-    ##pass
+## get rid of the first item in argv
+argv.pop(0)
+arg_count = len(argv)
+if arg_count == 0:
+	##terminal.repl()
+    repl()
+elif arg_count < 3:
+    run_command(argv)
 else:
-    ##todo:
-    ##parse commands to have actions
-    ##future: commandline.py
-    # commandline.run(sys.argv[1:])
-    pass
-
-test_proj = git.Project(TEST_URL)
-test_fs = fs.Project(test_proj.project_name)
-if test_fs.already_installed:
-    print(test_proj.project_name + " is already installed")
-else:
-    test_proj.clone()
-    test_fs.write_file()
+    print("Too many arguments")
